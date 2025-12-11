@@ -9,6 +9,55 @@ add_filter('admin_footer_text', '__return_empty_string');
 add_filter('update_footer', '__return_empty_string', 11);
 
 
+function leadlight_admin_menu()
+{
+    // Add Parent Menu
+    add_menu_page(
+        'LeadLight Forms',
+        'LeadLight',
+        'manage_options',
+        'leadlight-forms',
+        'display_submissions',
+        'dashicons-email-alt',
+        2 // position
+    );
+
+    // Submenu - Submissions
+    add_submenu_page(
+        'leadlight-forms',
+        'Contact Form Submissions',
+        'Contact Form Submissions',
+        'manage_options',
+        'leadlight-forms',
+        'display_submissions'
+    );
+
+    add_submenu_page(
+        'leadlight-forms',
+        'Site Details',
+        'Site Details',
+        'manage_options',
+        'leadlight-site-details',
+        'leadlight_site_details_page_html',
+        // 'dashicons-admin-home',
+    );
+
+    // // Submenu - Form Settings
+    // add_submenu_page(
+    //     'leadlight-forms',
+    //     'Form Settings',
+    //     'Settings',
+    //     'manage_options',
+    //     'leadlight-form-settings',
+    //     'leadlight_form_settings'
+    // );
+}
+add_action('admin_menu', 'leadlight_admin_menu');
+
+
+
+
+
 // Enqueue styles and scripts
 function leadlight_enqueue_assets()
 {
@@ -71,7 +120,7 @@ function ajax_contact_submit()
     }
 
     // Optional: send email
-    wp_mail('isaac@leadlight.app', 'New Contact Form Submission', "Name: $name\nEmail: $email\nMessage: $comment");
+    wp_mail('ioadejuwon@gmail.com', 'New Contact Form Submission', "Name: $name\nEmail: $email\nMessage: $comment");
 
     wp_send_json_success(['message' => 'Message sent successfully!']);
 }
@@ -261,8 +310,8 @@ function leadlight_register_faq_cpt()
         'menu_position'      => 30,
         'menu_icon'          => 'dashicons-editor-help',
         'supports'           => ['title', 'editor', 'revisions'],
-        'has_archive'        => true,
-        'rewrite'            => ['slug' => 'faqs'],
+        'has_archive'        => false,
+        'rewrite'            => ['slug' => 'faq-item'],
         'show_in_menu' => 'leadlight-forms'
     ];
 
@@ -302,33 +351,96 @@ function leadlight_save_faq_meta($post_id)
 }
 add_action('save_post', 'leadlight_save_faq_meta');
 
-function leadlight_faq_shortcode()
-{
-    ob_start();
-    $args = [
-        'post_type' => 'leadlight_faq',
-        'posts_per_page' => -1,
-        'orderby' => 'meta_value_num',
-        'meta_key' => '_faq_order',
-        'order' => 'ASC'
-    ];
 
-    $faqs = new WP_Query($args);
-    if ($faqs->have_posts()) {
-        echo '<div class="faqs">';
-        while ($faqs->have_posts()) {
-            $faqs->the_post();
-            echo '<div class="faq-item">';
-            echo '<h4>' . get_the_title() . '</h4>';
-            echo '<p>' . get_the_content() . '</p>';
-            echo '</div>';
-        }
-        echo '</div>';
-    }
-    wp_reset_postdata();
-    return ob_get_clean();
+
+
+
+
+
+
+function register_testimonials_cpt() {
+    $labels = array(
+        'name'               => 'Testimonials',
+        'singular_name'      => 'Testimonial',
+        'menu_name'          => 'Testimonials',
+        'add_new'            => 'Add New',
+        'add_new_item'       => 'Add New Testimonial',
+        'edit_item'          => 'Edit Testimonial',
+        'new_item'           => 'New Testimonial',
+        'view_item'          => 'View Testimonial',
+        'all_items'          => 'All Testimonials',
+        'search_items'       => 'Search Testimonials',
+        'not_found'          => 'No testimonials found',
+        'not_found_in_trash' => 'No testimonials found in Trash',
+    );
+
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'has_archive'        => false,
+        'menu_icon'          => 'dashicons-testimonial',
+        // 'supports'           => array('title', 'editor', 'thumbnail', 'custom-fields'),
+        'supports'           => ['title', 'editor', 'revisions'],
+        // 'show_in_rest'       => true, // for Gutenberg editor
+
+
+        // 'menu_position'      => 30,
+        // 'menu_icon'          => 'dashicons-editor-help',
+        // 'rewrite'            => ['slug' => 'faq-item'],
+        'show_in_menu' => 'leadlight-forms'
+    );
+
+    register_post_type('testimonial', $args);
 }
-add_shortcode('leadlight_faqs', 'leadlight_faq_shortcode');
+add_action('init', 'register_testimonials_cpt');
+
+
+
+function testimonial_meta_boxes() {
+    add_meta_box(
+        'testimonial_info',
+        'Testimonial Info',
+        'testimonial_info_callback',
+        'testimonial',
+        'normal',
+        'high'
+    );
+}
+add_action('add_meta_boxes', 'testimonial_meta_boxes');
+
+function testimonial_info_callback($post) {
+    $client_name = get_post_meta($post->ID, '_client_name', true);
+    $client_position = get_post_meta($post->ID, '_client_position', true);
+    ?>
+    <p>
+        <label>Client Name:</label><br>
+        <input type="text" name="client_name" value="<?php echo esc_attr($client_name); ?>" style="width:100%;">
+    </p>
+    <p>
+        <label>Client Position:</label><br>
+        <input type="text" name="client_position" value="<?php echo esc_attr($client_position); ?>" style="width:100%;">
+    </p>
+    <?php
+}
+
+function save_testimonial_meta($post_id) {
+    if (isset($_POST['client_name'])) {
+        update_post_meta($post_id, '_client_name', sanitize_text_field($_POST['client_name']));
+    }
+    if (isset($_POST['client_position'])) {
+        update_post_meta($post_id, '_client_position', sanitize_text_field($_POST['client_position']));
+    }
+}
+add_action('save_post', 'save_testimonial_meta');
+
+
+
+
+
+
+
+
+
 
 
 
@@ -373,7 +485,7 @@ add_action('admin_enqueue_scripts', 'leadlight_admin_custom_styles');
 
 add_action('admin_enqueue_scripts', function ($hook) {
     // Show the hook name for the current admin page
-    echo '<script>console.log("Current admin hook:", "' . $hook . '");</script>';
+    // echo '<script>console.log("Current admin hook:", "' . $hook . '");</script>';
 });
 
 function leadlight_site_details_page_html()
@@ -401,13 +513,15 @@ function leadlight_site_details_page_html()
 
                 <!-- <span class="fs-20 ls-minus-05px alt-fon text-dark-gray fw-600 mb-25px d-inline-block">Get a free consultation?</span> -->
                 <div class="contact-form-style-0 mt-0 ">
+
                     <h6 class="mb-10px mt-20px">Site details</h6>
                     <div class="row">
 
                         <div class="col-6">
                             <div class="position-relativ form-group mb-10px">
                                 <span>Email Address</span>
-                                <input type="text" name="leadlight_email" class="form-control regular-text border-color-extra-medium-gray" value="<?php echo esc_attr(get_option('leadlight_email')); ?>">
+                                <input type="email" name="leadlight_email" class="form-control regular-text border-color-extra-medium-gray" value="<?php echo esc_attr(get_option('leadlight_email')); ?>">
+                                <!-- <span class="fs-14">This is where you enter something about you</span> -->
                             </div>
                         </div>
 
@@ -425,13 +539,7 @@ function leadlight_site_details_page_html()
                             </div>
                         </div>
 
-                        <div class="col-6">
-                            <div class="position-relativ form-group mb-10px">
-                                <span>About You</span>
-                                <textarea name="leadlight_about" id="" class="form-control regular-text"> <?php echo esc_attr(get_option('leadlight_about')); ?> </textarea>
-                                <span class="fs-14">This is where you enter something about you</span>
-                            </div>
-                        </div>
+                     
 
                     </div>
 
@@ -646,6 +754,7 @@ function leadlight_about_excerpt($slug = 'about', $num_words = 90, $read_more = 
 }
 
 
+// Landing Page popup
 function popup()
 {
     // $popup
@@ -705,51 +814,6 @@ function popup()
 
     // return $popup;
 }
-function leadlight_admin_menu()
-{
-
-    // Add Parent Menu
-    add_menu_page(
-        'LeadLight Forms',
-        'LeadLight',
-        'manage_options',
-        'leadlight-forms',
-        'display_submissions',
-        'dashicons-email-alt',
-        2 // position
-    );
-
-    // Submenu - Submissions
-    add_submenu_page(
-        'leadlight-forms',
-        'Contact Form Submissions',
-        'Contact Form Submissions',
-        'manage_options',
-        'leadlight-forms',
-        'display_submissions'
-    );
-
-    add_submenu_page(
-        'leadlight-forms',
-        'Site Details',
-        'Site Details',
-        'manage_options',
-        'leadlight-site-details',
-        'leadlight_site_details_page_html',
-        // 'dashicons-admin-home',
-    );
-
-    // // Submenu - Form Settings
-    // add_submenu_page(
-    //     'leadlight-forms',
-    //     'Form Settings',
-    //     'Settings',
-    //     'manage_options',
-    //     'leadlight-form-settings',
-    //     'leadlight_form_settings'
-    // );
-}
-add_action('admin_menu', 'leadlight_admin_menu');
 
 
 
@@ -771,10 +835,7 @@ add_action('admin_menu', 'leadlight_admin_menu');
 
 
 
-
-
-
-
+// Button Custom Begin
 function add_custom_button_html($content)
 {
     return preg_replace_callback(
@@ -801,7 +862,6 @@ add_filter('the_content', 'add_custom_button_html');
 
 
 // Image Custom Begin
-
 function add_custom_image_class_for_services_blog($content)
 {
     // Only run for services CPT or blog posts

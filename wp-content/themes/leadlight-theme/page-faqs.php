@@ -12,7 +12,7 @@ get_header();
         <div class="container">
             <div class="row align-items-center justify-content-center extra-very-small-screen">
                 <div class="col-md-8 position-relative text-center page-title-extra-small">
-                    <h1 class="alt-fon text-white mb-0"> FAQs</h1>
+                    <h1 class="alt-fon text-white mb-0">FAQs</h1>
                 </div>
             </div>
         </div>
@@ -43,13 +43,7 @@ get_header();
                             Some frequently asked questions
                         </h3>
                         <div class="accordion accordion-style-02" id="accordion-style-02" data-active-icon="fa-angle-down" data-inactive-icon="fa-angle-right">
-
-
-
-
                             <?php
-
-
                             // $args = [
                             //     'post_type'      => 'leadlight_faq',
                             //     'posts_per_page' => -1,       // number of FAQs to show
@@ -72,12 +66,6 @@ get_header();
                                     $faq_id = get_the_ID(); // unique ID per FAQ
 
                             ?>
-
-
-
-
-
-
                                     <!-- start accordion item -->
                                     <div class="accordion-item">
                                         <div class="accordion-header border-bottom border-color-transparent-dark-light">
@@ -123,7 +111,9 @@ get_header();
     </section>
 
 
+</div>
 
 
-    <?php
-    get_footer();
+
+<?php
+get_footer();

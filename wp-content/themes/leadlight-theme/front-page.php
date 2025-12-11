@@ -180,7 +180,7 @@ get_header();
 <!-- end section -->
 
 
-<!-- start section -->
+<!-- Book Tayp start section -->
 <section class="cover-background p-0" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/home-bg-04.png')">
     <div class="container">
         <div class="row">
@@ -190,7 +190,7 @@ get_header();
                 </div>
             </div>
             <div class="col-xl-5 col-lg-6 offset-xl-1 pt-8 pb-10 align-self-end order-1 order-lg-2" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                <span class="fs-16 text-uppercase text-base-color fw-600 mb-20px d-inline-block ls-2px">Beauty salon focus on</span>
+                <span class="fs-16 text-uppercase text-base-color fw-600 mb-20px d-inline-block ls-2px">some Frequently Asked questions</span>
                 <h2 class="alt-fon fw-400 text-white">
                     Book Tayo Koleade
                 </h2>
@@ -266,7 +266,7 @@ get_header();
         </div>
     </div>
 </section>
-<!-- end section -->
+<!-- Book Tayp end section -->
 
 <!-- Brands start section -->
 <section class="bg-gradient-solitude-blue-fair-pin m- d-non">
@@ -317,7 +317,7 @@ get_header();
         </div>
         <div class="row justify-content-center align-items-center mb-5 sm-mb-30px" data-anime='{ "el": "childs", "translateY": [30, 1], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue":200, "easing": "easeOutQuad" }'>
             <div class="col-auto pe-25px border-2 border-end border-color-dark-gray sm-border-end-0 sm-pe-15px">
-                <span class="fs-16 text-uppercase text-gradient-san-blue-new-york-red fw-700 ls-1px">Associates brand</span>
+                <span class="fs-16 text-uppercase text-gradient-san-blue-new-york-red fw-700 ls-1px">Some Brands We have worked with</span>
             </div>
             <div class="col-12 col-md-auto ps-25px sm-ps-15px text-center">
                 <h3 class="alt-fon fw-400 text-dark-gray ls-minus-1px mb-0">Brands available</h3>
@@ -327,56 +327,56 @@ get_header();
             <!-- start client item -->
             <div class="col text-center border-end border-bottom border-color-transparent-dark-very-light sm-border-end-0 transition-inner-all pt-40px pb-40px sm-pt-30px sm-pb-30px">
                 <div class="client-box">
-                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/demo-beauty-salon-client-01.png" alt="" /></a>
+                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/client-01.png" alt="" /></a>
                 </div>
             </div>
             <!-- end client item -->
             <!-- start client item -->
             <div class="col text-center border-end border-bottom border-color-transparent-dark-very-light sm-border-end-0 transition-inner-all pt-40px pb-40px sm-pt-30px sm-pb-30px">
                 <div class="client-box">
-                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/demo-beauty-salon-client-02.png" alt="" /></a>
+                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/client-02.png" alt="" /></a>
                 </div>
             </div>
             <!-- end client item -->
             <!-- start client item -->
             <div class="col text-center border-end border-bottom border-color-transparent-dark-very-light sm-border-end-0 transition-inner-all pt-40px pb-40px sm-pt-30px sm-pb-30px">
                 <div class="client-box">
-                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/demo-beauty-salon-client-03.png" alt="" /></a>
+                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/client-03.png" alt="" /></a>
                 </div>
             </div>
             <!-- end client item -->
             <!-- start client item -->
             <div class="col text-center border-bottom border-color-transparent-dark-very-light sm-border-end-0 transition-inner-all pt-40px pb-40px sm-pt-30px sm-pb-30px">
                 <div class="client-box">
-                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/demo-beauty-salon-client-04.png" alt="" /></a>
+                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/client-04.png" alt="" /></a>
                 </div>
             </div>
             <!-- end client item -->
             <!-- start client item -->
             <div class="col text-center border-end border-color-transparent-dark-very-light sm-border-end-0 sm-border-bottom transition-inner-all pt-40px pb-40px sm-pt-30px sm-pb-30px">
                 <div class="client-box">
-                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/demo-beauty-salon-client-05.png" alt="" /></a>
+                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/client-05.png" alt="" /></a>
                 </div>
             </div>
             <!-- end client item -->
             <!-- start client item -->
             <div class="col text-center border-end border-color-transparent-dark-very-light sm-border-end-0 sm-border-bottom transition-inner-all pt-40px pb-40px sm-pt-30px sm-pb-30px">
                 <div class="client-box">
-                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/demo-beauty-salon-client-06.png" alt="" /></a>
+                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/client-06.png" alt="" /></a>
                 </div>
             </div>
             <!-- end client item -->
             <!-- start client item -->
             <div class="col text-center border-end border-color-transparent-dark-very-light sm-border-end-0 sm-border-bottom transition-inner-all pt-40px pb-40px sm-pt-30px sm-pb-30px">
                 <div class="client-box">
-                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/demo-beauty-salon-client-07.png" alt="" /></a>
+                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/client-07.png" alt="" /></a>
                 </div>
             </div>
             <!-- end client item -->
             <!-- start client item -->
             <div class="col text-center transition-inner-all pt-40px pb-40px">
                 <div class="client-box">
-                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/demo-beauty-salon-client-08.png" alt="" /></a>
+                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/client-08.png" alt="" /></a>
                 </div>
             </div>
             <!-- end client item -->
@@ -408,132 +408,84 @@ get_header();
                 <div class="outside-box-right-25 sm-outside-box-right-0">
                     <div class="swiper magic-cursor" data-slider-options='{ "slidesPerView": 1, "spaceBetween": 30, "loop": true, "navigation": { "nextEl": ".slider-one-slide-next-1", "prevEl": ".slider-one-slide-prev-1" }, "autoplay": { "delay": 400000, "disableOnInteraction": false },  "pagination": { "el": ".slider-three-slide-pagination", "clickable": true, "dynamicBullets": false }, "keyboard": { "enabled": true, "onlyInViewport": true }, "breakpoints": { "1200": { "slidesPerView": 3 }, "992": { "slidesPerView": 2 }, "768": { "slidesPerView": 2 }, "320": { "slidesPerView": 1 } }, "effect": "slide" }'>
                         <div class="swiper-wrapper">
-                            <!-- start slider item -->
-                            <div class="swiper-slide">
-                                <!-- start review item -->
-                                <div class="border border-color-extra-medium-gray border-radius-6px d-flex">
-                                    <div class="p-15px">
-                                        <div class="vertical-title-center align-items-center">
-                                            <div class="title fs-16 text-dark-gray fw-700 text-uppercase ls-1px">Emma causer</div>
-                                        </div>
-                                    </div>
-                                    <div class="p-40px border-start border-color-extra-medium-gray d-flex justify-content-center xs-p-25px">
-                                        <div>
-                                            <p class="mb-10px w-95 xl-w-100">A wonderfully professional salon, beautiful location and beautifully kept. Great products knowledge.</p>
-                                            <div class="text-gradient-san-blue-new-york-red d-inline-block fs-20">
-                                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+
+
+
+
+
+
+                            <?php
+
+                            $args = [
+                                // 'post_type' => 'testimonial',
+                                // 'posts_per_page' => -1, // all FAQs
+                                // 'orderby' => 'meta_value_num', // if using order meta
+                                // 'meta_key' => '_faq_order',
+                                // 'order' => 'ASC'
+
+
+                                'post_type'      => 'testimonial',
+                                'posts_per_page' => -1,
+                                'orderby'        => 'date', // Or use a custom order if needed
+                                'order'          => 'DESC',
+
+                            ];
+
+                            $testimonials = new WP_Query($args);
+
+                            if ($testimonials->have_posts()) :
+                                while ($testimonials->have_posts()) :
+                                    $testimonials->the_post();
+                                    // $testimonials_id = get_the_ID(); // unique ID per FAQ
+                                    $client_name = get_post_meta(get_the_ID(), '_client_name', true);
+                                    $client_position = get_post_meta(get_the_ID(), '_client_position', true);
+                            ?>
+
+
+                                    <!-- start slider item -->
+                                    <div class="swiper-slide">
+                                        <!-- start review item -->
+                                        <div class="border border-color-extra-medium-gray border-radius-6px d-flex">
+                                            <div class="p-15px">
+                                                <div class="vertical-title-center align-items-center">
+                                                    <div class="title fs-16 text-dark-gray fw-700 text-uppercase ls-1px">
+                                                        <?php the_title(); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="p-40px border-start border-color-extra-medium-gray d-flex justify-content-center xs-p-25px">
+                                                <div>
+                                                    <!-- <p class="mb-10px w-95 xl-w-100 line-clamp-2">
+                                                        <?php the_content(); ?>
+                                                    </p> -->
+
+                                                    <p class="mb-10px w-95 xl-w-100 line-clamp-3">
+                                                        <?php echo wp_kses_post(get_the_content('', false)); ?>
+                                                    </p>
+
+                                                    <div class="text-gradient-san-blue-new-york-red d-inline-block fs-20">
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                        <i class="bi bi-star-fill"></i>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
+                                        <!-- end review item -->
                                     </div>
-                                </div>
-                                <!-- end review item -->
-                            </div>
-                            <!-- end slider item -->
-                            <!-- start slider item -->
-                            <div class="swiper-slide">
-                                <!-- start review item -->
-                                <div class="border border-color-extra-medium-gray border-radius-6px d-flex">
-                                    <div class="p-15px">
-                                        <div class="vertical-title-center align-items-center">
-                                            <div class="title fs-16 text-dark-gray fw-700 text-uppercase ls-1px">Lesley simms</div>
-                                        </div>
-                                    </div>
-                                    <div class="p-40px border-start border-color-extra-medium-gray d-flex justify-content-center xs-p-25px">
-                                        <div>
-                                            <p class="mb-10px w-95 xl-w-100">Perfection isn't just any other salon. It's a complete cut above the rest. Highly recommended!</p>
-                                            <div class="text-gradient-san-blue-new-york-red d-inline-block fs-20">
-                                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end review item -->
-                            </div>
-                            <!-- end slider item -->
-                            <!-- start slider item -->
-                            <div class="swiper-slide">
-                                <!-- start review item -->
-                                <div class="border border-color-extra-medium-gray border-radius-6px d-flex">
-                                    <div class="p-15px">
-                                        <div class="vertical-title-center align-items-center">
-                                            <div class="title fs-16 text-dark-gray fw-700 text-uppercase ls-1px">Nickie coombs</div>
-                                        </div>
-                                    </div>
-                                    <div class="p-40px border-start border-color-extra-medium-gray d-flex justify-content-center xs-p-25px">
-                                        <div>
-                                            <p class="mb-10px w-95 xl-w-100">Perfection should be everyones number one choice to relax and treat yourself or loved ones.</p>
-                                            <div class="text-gradient-san-blue-new-york-red d-inline-block fs-20">
-                                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end review item -->
-                            </div>
-                            <!-- end slider item -->
-                            <!-- start slider item -->
-                            <div class="swiper-slide">
-                                <!-- start review item -->
-                                <div class="border border-color-extra-medium-gray border-radius-6px d-flex">
-                                    <div class="p-15px">
-                                        <div class="vertical-title-center align-items-center">
-                                            <div class="title fs-16 text-dark-gray fw-700 text-uppercase ls-1px">Bella roberts</div>
-                                        </div>
-                                    </div>
-                                    <div class="p-40px border-start border-color-extra-medium-gray d-flex justify-content-center xs-p-25px">
-                                        <div>
-                                            <p class="mb-10px w-95 xl-w-100">Dedicated team will do their best to meet your needs and give you your ultimate treatment.</p>
-                                            <div class="text-gradient-san-blue-new-york-red d-inline-block fs-20">
-                                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end review item -->
-                            </div>
-                            <!-- end slider item -->
-                            <!-- start slider item -->
-                            <div class="swiper-slide">
-                                <!-- start review item -->
-                                <div class="border border-color-extra-medium-gray border-radius-6px d-flex">
-                                    <div class="p-15px">
-                                        <div class="vertical-title-center align-items-center">
-                                            <div class="title fs-16 text-dark-gray fw-700 text-uppercase ls-1px">Herman miller</div>
-                                        </div>
-                                    </div>
-                                    <div class="p-40px border-start border-color-extra-medium-gray d-flex justify-content-center xs-p-25px">
-                                        <div>
-                                            <p class="mb-10px w-95 xl-w-100">Perfection isn't just any other salon. It's a complete cut above the rest. Wonderfully professional.</p>
-                                            <div class="text-gradient-san-blue-new-york-red d-inline-block fs-20">
-                                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end review item -->
-                            </div>
-                            <!-- end slider item -->
-                            <!-- start slider item -->
-                            <div class="swiper-slide">
-                                <!-- start review item -->
-                                <div class="border border-color-extra-medium-gray border-radius-6px d-flex">
-                                    <div class="p-15px">
-                                        <div class="vertical-title-center align-items-center">
-                                            <div class="title fs-16 text-dark-gray fw-700 text-uppercase ls-1px">Shoko mugikura</div>
-                                        </div>
-                                    </div>
-                                    <div class="p-40px border-start border-color-extra-medium-gray d-flex justify-content-center xs-p-25px">
-                                        <div>
-                                            <p class="mb-10px w-95 xl-w-100">Dedicated team will do their best to meet your needs and give you your ultimate treatment.</p>
-                                            <div class="text-gradient-san-blue-new-york-red d-inline-block fs-20">
-                                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end review item -->
-                            </div>
-                            <!-- end slider item -->
+                                    <!-- end slider item -->
+
+                            <?php
+                                endwhile;
+                                wp_reset_postdata();
+                            endif;
+                            ?>
+
+
+
+
                         </div>
                     </div>
                 </div>

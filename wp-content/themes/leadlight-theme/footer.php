@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    <h6 class="text-white mb-0 alt-font">
+                    <h6 class="text-white mb-0 alt-fon">
                         Leadership that produces transformation.
                         <a href="<?php echo esc_url(home_url('/consultation')); ?>" class="text-white text-decoration-line-bottom-medium d-inline-block">
                             Book Free Discovery Call

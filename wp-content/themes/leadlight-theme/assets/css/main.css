@@ -62,7 +62,7 @@ section {
 }
 
 header .navbar-brand img {
-    max-height: 49px;
+    max-height: 70px;
 }
 
 header .navbar-brand {
@@ -354,4 +354,28 @@ footer .nav-link {
 
 .notification.show {
   opacity: 1;
+}
+
+
+
+
+.line-clamp-4,.line-clamp-3,.line-clamp-2,.line-clamp-1,.line-clamp-0{
+    overflow:hidden;
+    display:-webkit-box;
+    -webkit-box-orient:vertical
+}
+.line-clamp-0{
+    -webkit-line-clamp:0
+}
+.line-clamp-1{
+    -webkit-line-clamp:1
+}
+.line-clamp-2{
+    -webkit-line-clamp:2
+}
+.line-clamp-3{
+    -webkit-line-clamp:3
+}
+.line-clamp-4{
+    -webkit-line-clamp:4
 }

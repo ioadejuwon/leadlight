@@ -8917,7 +8917,7 @@ header .navbar-brand {
 header .navbar-brand .default-logo {
     visibility: visible;
     opacity: 1;
-    width: auto
+    width: 100% !important
 }
 
 header .navbar-brand .alt-logo,
@@ -8928,7 +8928,7 @@ header .navbar-brand .mobile-logo {
 }
 
 header .navbar-brand img {
-    max-height: 46px
+    /* max-height: 46px */
 }
 
 header .header-top-bar {
