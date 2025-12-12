@@ -28,7 +28,7 @@ get_header();
             <div class="row align-items-center justify-content-center mb-7">
                 <div class="col-xl-5 col-lg-6 mb-" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
 
-                    <div class="calendly-inline-widget" data-url="https://calendly.com/ioadejuwon/30min" style="min-width:500px;height:900px;"></div>
+                    <div class="calendly-inline-widget" data-url="<?php echo get_option('leadlight_calendly_link'); ?>" style="min-width:300px;height:900px;"></div>
                     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
                    

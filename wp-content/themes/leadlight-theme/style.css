@@ -1,14 +1,19 @@
-/**
- * Theme Name: LeadLight Leaders Main
- * Author: MartVille Technologies
- * Author URI: https://martville.app
- * Description: ABout LeadLight Leaders Theme
- * Requires at least: 6.1
- * Tested up to: 6.4
- * Requires PHP: 7.4
- * Version: 1.0.1
- * License: GNU General Public License v2 or later
- * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: MartVille
- * Tags: LeadLight Leaders
+/*
+Theme Name: LeadLight Leaders
+Theme URI:  https://leadlightleaders.com/
+Author:     LeadLight Media / Oluwasegun Isaac Adejuwon / MartVille Technologies
+Author URI: https://martville.app/
+Description: A modern, accessible, and responsive WordPress theme focused on clean typography, flexible layout blocks, and fast performance. Ideal for agencies, portfolios, and small businesses.
+Requires at least: 6.1
+Tested up to: 6.4
+Requires PHP: 7.4
+Version:    1.0.2
+
+License:    GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: leadlight-leaders
+Tags: one-column, two-columns, flexible-header, custom-logo, custom-menu, accessibility-ready, responsive-layout, retina-ready, translation-ready, blog, portfolio, header-image
+
+This file contains the theme header metadata required by WordPress.
+It also includes base styles, variables, layout helpers, and component-level CSS.
 */

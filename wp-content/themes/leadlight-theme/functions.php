@@ -358,7 +358,8 @@ add_action('save_post', 'leadlight_save_faq_meta');
 
 
 
-function register_testimonials_cpt() {
+function register_testimonials_cpt()
+{
     $labels = array(
         'name'               => 'Testimonials',
         'singular_name'      => 'Testimonial',
@@ -396,7 +397,8 @@ add_action('init', 'register_testimonials_cpt');
 
 
 
-function testimonial_meta_boxes() {
+function testimonial_meta_boxes()
+{
     add_meta_box(
         'testimonial_info',
         'Testimonial Info',
@@ -408,10 +410,11 @@ function testimonial_meta_boxes() {
 }
 add_action('add_meta_boxes', 'testimonial_meta_boxes');
 
-function testimonial_info_callback($post) {
+function testimonial_info_callback($post)
+{
     $client_name = get_post_meta($post->ID, '_client_name', true);
     $client_position = get_post_meta($post->ID, '_client_position', true);
-    ?>
+?>
     <p>
         <label>Client Name:</label><br>
         <input type="text" name="client_name" value="<?php echo esc_attr($client_name); ?>" style="width:100%;">
@@ -420,10 +423,11 @@ function testimonial_info_callback($post) {
         <label>Client Position:</label><br>
         <input type="text" name="client_position" value="<?php echo esc_attr($client_position); ?>" style="width:100%;">
     </p>
-    <?php
+<?php
 }
 
-function save_testimonial_meta($post_id) {
+function save_testimonial_meta($post_id)
+{
     if (isset($_POST['client_name'])) {
         update_post_meta($post_id, '_client_name', sanitize_text_field($_POST['client_name']));
     }
@@ -457,6 +461,7 @@ function leadlight_register_site_settings()
     register_setting('leadlight_site_details_group', 'leadlight_whatsapp');
     register_setting('leadlight_site_details_group', 'leadlight_mon_fri');
     register_setting('leadlight_site_details_group', 'leadlight_sat_sun');
+    register_setting('leadlight_site_details_group', 'leadlight_calendly_link');
 }
 add_action('admin_init', 'leadlight_register_site_settings');
 
@@ -516,7 +521,6 @@ function leadlight_site_details_page_html()
 
                     <h6 class="mb-10px mt-20px">Site details</h6>
                     <div class="row">
-
                         <div class="col-6">
                             <div class="position-relativ form-group mb-10px">
                                 <span>Email Address</span>
@@ -535,12 +539,9 @@ function leadlight_site_details_page_html()
                         <div class="col-6">
                             <div class="position-relativ form-group mb-10px">
                                 <span>Company Address</span>
-                                <textarea name="leadlight_address" id="" class="form-control  regular-text"> <?php echo esc_attr(get_option('leadlight_address')); ?> </textarea>
+                                <textarea name="leadlight_address" id="" placeholder="Address to show on the website" class="form-control  regular-text"> <?php echo esc_attr(get_option('leadlight_address')); ?> </textarea>
                             </div>
                         </div>
-
-                     
-
                     </div>
 
                     <h6 class="mb-10px mt-20px">Social Media Link</h6>
@@ -548,7 +549,7 @@ function leadlight_site_details_page_html()
                     <div class="row">
                         <div class="col-6">
                             <div class="position-relative form-group mb-20px">
-                                <span>Facebook URL</span>
+                                <span>Facebook handle</span>
                                 <input type="text" name="leadlight_facebook" value="<?php echo esc_attr(get_option('leadlight_facebook')); ?>" class="form-control regular-text border-color-extra-medium-gray" placeholder="@handle">
                             </div>
                         </div>
@@ -556,12 +557,10 @@ function leadlight_site_details_page_html()
 
                         <div class="col-6">
                             <div class="position-relative form-group mb-20px">
-                                <span>Instagram URL</span>
+                                <span>Instagram handle</span>
                                 <input type="text" name="leadlight_instagram" value="<?php echo esc_attr(get_option('leadlight_instagram')); ?>" class="form-control regular-text border-color-extra-medium-gray" placeholder="@handle">
                             </div>
                         </div>
-
-
 
                         <div class="col-6">
                             <div class="position-relative form-group mb-20px">
@@ -570,31 +569,45 @@ function leadlight_site_details_page_html()
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <h6 class="mb-10px mt-20px">Opening Hours</h6>
 
-                <div class="row">
-                    <div class="col-6">
-                        <div class="position-relative form-group mb-20px">
-                            <span>Monday - Friday</span>
-                            <input type="text" name="leadlight_mon_fri" value="<?php echo esc_attr(get_option('leadlight_mon_fri')); ?>" class="form-control regular-text border-color-extra-medium-gray" placeholder="@handle">
+                    <h6 class="mb-10px mt-20px">Calendly link</h6>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="position-relative form-group mb-20px">
+                                <span>Calendly URL</span>
+                                <input type="text" name="leadlight_calendly_link" value="<?php echo esc_attr(get_option('leadlight_calendly_link')); ?>" class="form-control regular-text border-color-extra-medium-gray" placeholder="https://calendly.com/link">
+                            </div>
                         </div>
                     </div>
 
 
-                    <div class="col-6">
-                        <div class="position-relative form-group mb-20px">
-                            <span>Saturday - Sunday</span>
-                            <input type="text" name="leadlight_sat_sun" value="<?php echo esc_attr(get_option('leadlight_sat_sun')); ?>" class="form-control regular-text border-color-extra-medium-gray" placeholder="@handle">
+
+                    <h6 class="mb-10px mt-20px">Opening Hours</h6>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="position-relative form-group mb-20px">
+                                <span>Monday - Friday</span>
+                                <input type="text" name="leadlight_mon_fri" value="<?php echo esc_attr(get_option('leadlight_mon_fri')); ?>" class="form-control regular-text border-color-extra-medium-gray" placeholder="09 am to 02 pm">
+                            </div>
+                        </div>
+
+
+                        <div class="col-6">
+                            <div class="position-relative form-group mb-20px">
+                                <span>Saturday - Sunday</span>
+                                <input type="text" name="leadlight_sat_sun" value="<?php echo esc_attr(get_option('leadlight_sat_sun')); ?>" class="form-control regular-text border-color-extra-medium-gray" placeholder="09 am to 05 pm">
+                            </div>
                         </div>
                     </div>
                 </div>
 
 
-                <!-- <button class="btn btn-medium btn-round-edge btn-base-color btn-box-shadow mt-20px submit w-20" type="submit">Send message</button> -->
 
-                <?php submit_button(
+                <?php
+                submit_button(
                     'Update Details',
                     'primary',
                     'submit',
@@ -602,19 +615,14 @@ function leadlight_site_details_page_html()
                     array(
                         'class' => 'btn btn-extra-large btn-base-color btn-hover-animation-switch btn-round-edge btn-box-shadow',
                         'style' => 'background:#0D3556;border-radius:8px;padding:12px 24px;font-size:16px;border:none; width: 200px'
-
                     )
-                ); ?>
+                );
+                ?>
 
             </div>
     </div>
 
 
-
-
-    <!-- function submit_button( $text = '', $type = 'primary', $name = 'submit', $wrap = true, $other_attributes = '' ) {
-	echo get_submit_button( $text, $type, $name, $wrap, $other_attributes );
-} -->
 
     </form>
     </div>

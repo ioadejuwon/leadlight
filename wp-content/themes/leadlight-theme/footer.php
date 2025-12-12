@@ -42,9 +42,10 @@
                 <span class="d-block text-base-color fs-15 ls-1px mb-10px text-uppercase fw-600">Connect with us</span>
                 <div class="elements-social social-icon-style-09">
                     <ul class="medium-icon light">
-                        <li><a class="facebook" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i><span></span></a></li>
-                        <li><a class="instagram" href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i><span></span></a></li>
-                        <li><a class="twitter" href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i><span></span></a></li>
+                        <li><a class="facebook" href="https://www.facebook.com/<?php echo get_option('leadlight_facebook'); ?>" target="_blank"><i class="fa-brands fa-facebook-f"></i><span></span></a></li>
+                        <li><a class="instagram" href="https://www.instagram.com/<?php echo get_option('leadlight_instagram'); ?>" target="_blank"><i class="fa-brands fa-instagram"></i><span></span></a></li>
+                        <li><a class="twitter" href="https://www.twitter.com/<?php echo get_option('leadlight_twitter'); ?>" target="_blank"><i class="fa-brands fa-twitter"></i><span></span></a></li>
+                        <li><a class="Whatsapp" href="https://www.wa.me/<?php echo get_option('leadlight_whatsapp'); ?>" target="_blank"><i class="fa-brands fa-whatsapp"></i><span></span></a></li>
                     </ul>
                 </div>
             </div>
